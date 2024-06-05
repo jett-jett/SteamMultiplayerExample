@@ -33,3 +33,11 @@ offset_right = 655.0
 offset_bottom = 416.0
 text = "Settings
 "
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 438.0
+offset_right = 601.0
+offset_bottom = 469.0
+text = "Quit"
