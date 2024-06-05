@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dexujuc7f7ln8"]
+
+[node name="MenuMain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 206.0
+offset_right = 701.0
+offset_bottom = 262.0
+text = "Start Single Player"
+
+[node name="Multiplayer" type="Button" parent="."]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 279.0
+offset_right = 678.0
+offset_bottom = 356.0
+text = "Start Online Co-op
+"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 376.0
+offset_right = 655.0
+offset_bottom = 416.0
+text = "Settings
+"
