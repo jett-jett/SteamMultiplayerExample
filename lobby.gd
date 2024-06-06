@@ -18,8 +18,8 @@ func join_lobby(id):
 	multiplayer.multiplayer_peer = peer
 	lobby_id = id
 
-func _on_lobby_created(connect, id):
-	if connect:
+func _on_lobby_created(connected, id):
+	if connected:
 		lobby_id = id
 		Steam.setLobbyData(lobby_id, "name", str(Steam.getPersonaName()+"'s Lobby"))
 		Steam.setLobbyJoinable(lobby_id, true)
