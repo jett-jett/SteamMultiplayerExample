@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Menu="*res://Menu.gd"
 GlobalSteam="*res://Steam.gd"
 
 [debug]
