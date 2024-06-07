@@ -11,7 +11,6 @@ var steam_username: String = ""
 func _init():
 	OS.set_environment("SteamAppID", str(480))
 	OS.set_environment("SteamGameID", str(480))
-	
 
 func _ready():
 	initialize_steam()

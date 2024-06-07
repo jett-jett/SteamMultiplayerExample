@@ -44,10 +44,7 @@ func _on_refresh_pressed():
 		for n in $LobbyContainer/Lobbies.get_children():
 			n.queue_free()
 	open_lobby_list()
-		
-	
 
 
 func _on_back_pressed():
-	#get_tree().
-	pass # Replace with function body.
+	Menu.load_menu(Menu.MENU_LEVEL.MAIN)
