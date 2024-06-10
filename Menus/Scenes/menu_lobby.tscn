@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://8wogw7f1ekw3"]
+
+[ext_resource type="Script" path="res://Menus/Scripts/menu_lobby.gd" id="1_87t0v"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_87t0v")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 915.0
+offset_top = 580.0
+offset_right = 1126.0
+offset_bottom = 622.0
+text = "Start
+"
+
+[node name="Invite" type="Button" parent="."]
+layout_mode = 0
+offset_left = 917.0
+offset_top = 535.0
+offset_right = 1126.0
+offset_bottom = 572.0
+text = "Invite"
+
+[node name="PlayerPictureContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_top = 486.0
+offset_right = 908.0
+offset_bottom = 647.0

@@ -12,11 +12,13 @@ func _ready():
 func _on_host_pressed():
 	peer.create_lobby(SteamMultiplayerPeer.LOBBY_TYPE_PUBLIC)
 	multiplayer.multiplayer_peer = peer
+	Menu.load_menu(Menu.MENU_LEVEL.LOBBY)
 
 func join_lobby(id):
 	peer.connect_lobby(id)
 	multiplayer.multiplayer_peer = peer
 	lobby_id = id
+	Menu.load_menu(Menu.MENU_LEVEL.LOBBY)
 
 func _on_lobby_created(connected, id):
 	if connected:
@@ -44,7 +46,6 @@ func _on_refresh_pressed():
 		for n in $LobbyContainer/Lobbies.get_children():
 			n.queue_free()
 	open_lobby_list()
-
 
 func _on_back_pressed():
 	Menu.load_menu(Menu.MENU_LEVEL.MAIN)

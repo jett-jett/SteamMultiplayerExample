@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dexujuc7f7ln8"]
 
-[ext_resource type="Script" path="res://menu_main.gd" id="1_gnceq"]
+[ext_resource type="Script" path="res://Menus/Scripts/menu_main.gd" id="1_xkx6x"]
 
 [node name="MenuMain" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_gnceq")
+script = ExtResource("1_xkx6x")
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 0

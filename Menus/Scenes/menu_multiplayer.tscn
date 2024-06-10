@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dvpuph4fb5vxj"]
 
-[ext_resource type="Script" path="res://lobby.gd" id="1_a4u1h"]
+[ext_resource type="Script" path="res://Menus/Scripts/menu_multiplayer.gd" id="1_g43sv"]
 
 [node name="MenuLobby" type="Control"]
 layout_mode = 3
@@ -9,42 +9,42 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_a4u1h")
+script = ExtResource("1_g43sv")
 
 [node name="Host" type="Button" parent="."]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 76.0
-offset_right = 195.0
-offset_bottom = 84.0
+offset_left = 188.0
+offset_top = 573.0
+offset_right = 340.0
+offset_bottom = 604.0
 text = "Host
 "
 
 [node name="Refresh" type="Button" parent="."]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 141.0
-offset_right = 185.0
-offset_bottom = 174.0
+offset_left = 982.0
+offset_top = 101.0
+offset_right = 1111.0
+offset_bottom = 134.0
 text = "Refresh
 "
 
 [node name="LobbyContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
-offset_left = 616.0
-offset_top = 102.0
-offset_right = 1104.0
-offset_bottom = 556.0
+offset_left = 623.0
+offset_top = 157.0
+offset_right = 1111.0
+offset_bottom = 611.0
 
 [node name="Lobbies" type="VBoxContainer" parent="LobbyContainer"]
 layout_mode = 2
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 226.0
-offset_right = 211.0
-offset_bottom = 257.0
+offset_left = 19.0
+offset_top = 30.0
+offset_right = 184.0
+offset_bottom = 61.0
 text = "Back
 "
 

@@ -5,12 +5,14 @@ enum MENU_LEVEL {
 	MAIN,
 	SINGLEPLAYER,
 	MULTIPLAYER,
+	LOBBY,
 	OPTIONS
 }
 
 var menus = {
-	MENU_LEVEL.MAIN : preload("res://menu_main.tscn").instantiate(),
-	MENU_LEVEL.MULTIPLAYER : preload("res://menu_lobby.tscn").instantiate()
+	MENU_LEVEL.MAIN : preload("res://Menus/Scenes/menu_main.tscn").instantiate(),
+	MENU_LEVEL.MULTIPLAYER : preload("res://Menus/Scenes/menu_multiplayer.tscn").instantiate(),
+	MENU_LEVEL.LOBBY: preload("res://Menus/Scenes/menu_lobby.tscn").instantiate()
 }
 
 var current_menu : Node = null
