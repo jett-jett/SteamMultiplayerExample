@@ -5,6 +5,8 @@ enum MENU_LEVEL {
 	MAIN,
 	SINGLEPLAYER,
 	MULTIPLAYER,
+	HOST,
+	JOIN,
 	LOBBY,
 	OPTIONS
 }
@@ -12,7 +14,9 @@ enum MENU_LEVEL {
 var menus = {
 	MENU_LEVEL.MAIN : preload("res://Menus/Scenes/menu_main.tscn").instantiate(),
 	MENU_LEVEL.MULTIPLAYER : preload("res://Menus/Scenes/menu_multiplayer.tscn").instantiate(),
-	MENU_LEVEL.LOBBY: preload("res://Menus/Scenes/menu_lobby.tscn").instantiate()
+	MENU_LEVEL.LOBBY: preload("res://Menus/Scenes/menu_lobby.tscn").instantiate(),
+	MENU_LEVEL.HOST: preload("res://Menus/Scenes/menu_host.tscn").instantiate(),
+	MENU_LEVEL.JOIN: preload("res://Menus/Scenes/menu_join.tscn").instantiate()
 }
 
 var current_menu : Node = null

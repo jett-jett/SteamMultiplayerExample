@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Menus/Scripts/menu_lobby.gd" id="1_87t0v"]
 
-[node name="Control" type="Control"]
+[node name="MenuLobby" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,19 +13,19 @@ script = ExtResource("1_87t0v")
 
 [node name="Start" type="Button" parent="."]
 layout_mode = 0
-offset_left = 915.0
-offset_top = 580.0
-offset_right = 1126.0
-offset_bottom = 622.0
+offset_left = 477.0
+offset_top = 469.0
+offset_right = 688.0
+offset_bottom = 511.0
 text = "Start
 "
 
 [node name="Invite" type="Button" parent="."]
 layout_mode = 0
-offset_left = 917.0
-offset_top = 535.0
-offset_right = 1126.0
-offset_bottom = 572.0
+offset_left = 471.0
+offset_top = 412.0
+offset_right = 680.0
+offset_bottom = 449.0
 text = "Invite"
 
 [node name="PlayerPictureContainer" type="GridContainer" parent="."]
