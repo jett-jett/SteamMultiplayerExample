@@ -16,3 +16,7 @@ func _on_host_pressed():
 	#multiplayer.multiplayer_peer = peer
 	#lobby_id = id
 	Menu.load_menu(Menu.MENU_LEVEL.LOBBY)
+
+
+func _on_back_pressed():
+	Menu.load_menu(Menu.MENU_LEVEL.MAIN)

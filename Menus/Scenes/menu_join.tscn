@@ -13,29 +13,29 @@ script = ExtResource("1_0ncdv")
 
 [node name="Refresh" type="Button" parent="."]
 layout_mode = 0
-offset_left = 850.0
-offset_top = 49.0
-offset_right = 979.0
-offset_bottom = 82.0
+offset_left = 1518.0
+offset_top = 249.0
+offset_right = 1647.0
+offset_bottom = 282.0
 text = "Refresh
 "
 
 [node name="LobbyContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
-offset_left = 623.0
-offset_top = 157.0
-offset_right = 1111.0
-offset_bottom = 611.0
+offset_left = 1272.0
+offset_top = 350.0
+offset_right = 1760.0
+offset_bottom = 804.0
 
 [node name="Lobbies" type="VBoxContainer" parent="LobbyContainer"]
 layout_mode = 2
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
-offset_left = 19.0
-offset_top = 30.0
-offset_right = 184.0
-offset_bottom = 61.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 350.0
+offset_bottom = 100.0
 text = "Back
 "
 

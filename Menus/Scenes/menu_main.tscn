@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dexujuc7f7ln8"]
+[gd_scene load_steps=3 format=3 uid="uid://dexujuc7f7ln8"]
 
 [ext_resource type="Script" path="res://Menus/Scripts/menu_main.gd" id="1_xkx6x"]
+[ext_resource type="Theme" uid="uid://dfyjsd6wia24r" path="res://Themes/button_theme.tres" id="2_8yqhx"]
 
 [node name="MenuMain" type="Control"]
 layout_mode = 3
@@ -13,36 +14,37 @@ script = ExtResource("1_xkx6x")
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 0
-offset_left = 426.0
-offset_top = 206.0
-offset_right = 701.0
-offset_bottom = 262.0
+offset_left = 810.0
+offset_top = 500.0
+offset_right = 1110.0
+offset_bottom = 550.0
+theme = ExtResource("2_8yqhx")
 text = "Start Single Player"
 
 [node name="Multiplayer" type="Button" parent="."]
 layout_mode = 0
-offset_left = 457.0
-offset_top = 279.0
-offset_right = 678.0
-offset_bottom = 356.0
+offset_left = 810.0
+offset_top = 560.0
+offset_right = 1110.0
+offset_bottom = 610.0
 text = "Start Online Co-op
 "
 
 [node name="Settings" type="Button" parent="."]
 layout_mode = 0
-offset_left = 491.0
-offset_top = 376.0
-offset_right = 655.0
-offset_bottom = 416.0
+offset_left = 810.0
+offset_top = 620.0
+offset_right = 1110.0
+offset_bottom = 670.0
 text = "Settings
 "
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 559.0
-offset_top = 438.0
-offset_right = 601.0
-offset_bottom = 469.0
+offset_left = 810.0
+offset_top = 680.0
+offset_right = 1110.0
+offset_bottom = 730.0
 text = "Quit"
 
 [connection signal="pressed" from="Multiplayer" to="." method="_on_multiplayer_pressed"]

@@ -7,25 +7,29 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 660.0
+offset_top = 223.0
+offset_right = -660.0
+offset_bottom = -257.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g43sv")
 
 [node name="Host" type="Button" parent="."]
 layout_mode = 0
-offset_left = 127.0
-offset_top = 137.0
-offset_right = 260.0
-offset_bottom = 231.0
+offset_left = 53.0
+offset_top = 230.0
+offset_right = 253.0
+offset_bottom = 330.0
 text = "Host
 "
 
 [node name="Join" type="Button" parent="."]
 layout_mode = 0
-offset_left = 298.0
-offset_top = 135.0
-offset_right = 461.0
-offset_bottom = 253.0
+offset_left = 343.0
+offset_top = 229.0
+offset_right = 543.0
+offset_bottom = 329.0
 text = "Join
 "
 
