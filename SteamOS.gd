@@ -33,24 +33,28 @@ func initialize_steam() -> void:
 	steam_id = Steam.getSteamID()
 	steam_username = Steam.getPersonaName()
 	
+	#Multiplayer
+	peer.lobby_created.connect(_on_lobby_created)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	Steam.run_callbacks()
 	pass
 
+#Multiplayer
 
 func _on_lobby_created(connected, id):
 	if connected:
 		lobby_id = id
 		Steam.setLobbyData(lobby_id, "name", str(Steam.getPersonaName()+"'s Lobby"))
 		Steam.setLobbyJoinable(lobby_id, true)
-		print(lobby_id)
+		print("Lobby ID: " + str(lobby_id))
 
-func join_lobby(id):
-	if lobby_id == 0:
-		lobby_id = id
-	peer.connect_lobby(lobby_id)
+func create_lobby():
+	peer.create_lobby(SteamMultiplayerPeer.LOBBY_TYPE_PUBLIC)
 	multiplayer.multiplayer_peer = peer
 
-
-
+func join_lobby(id):
+	lobby_id = id
+	peer.connect_lobby(lobby_id)
+	multiplayer.multiplayer_peer = peer

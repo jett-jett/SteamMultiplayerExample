@@ -3,7 +3,6 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#TODO peer.lobby_created.connect(_on_lobby_created)
 	Steam.lobby_match_list.connect(_on_lobby_match_list)
 	open_lobby_list()
 
@@ -20,6 +19,8 @@ func _on_lobby_match_list(lobbies):
 		but.set_size(Vector2(100,5))
 		but.connect("pressed", Callable(self,"join_lobby").bind(lobby))
 		$LobbyContainer/Lobbies.add_child(but)
+
+#TODO Create JOIN LOBBY FUNCTION THAT USES STEAMOS SPRIPT
 
 func _on_refresh_pressed():
 	if $LobbyContainer/Lobbies.get_child_count() > 0 :

@@ -11,7 +11,7 @@ func _process(delta):
 
 
 func _on_host_pressed():
-	SteamOs.join_lobby(SteamOs.lobby_id)
+	SteamOs.create_lobby()
 	Menu.load_menu(Menu.MENU_LEVEL.LOBBY)
 
 
