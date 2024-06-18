@@ -1,6 +1,5 @@
 extends Control
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,9 +11,7 @@ func _process(delta):
 
 
 func _on_host_pressed():
-	#peer.connect_lobby(id)
-	#multiplayer.multiplayer_peer = peer
-	#lobby_id = id
+	SteamOs.join_lobby(SteamOs.lobby_id)
 	Menu.load_menu(Menu.MENU_LEVEL.LOBBY)
 
 

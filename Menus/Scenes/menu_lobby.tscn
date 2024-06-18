@@ -29,10 +29,16 @@ offset_bottom = 449.0
 text = "Invite"
 
 [node name="PlayerPictureContainer" type="GridContainer" parent="."]
-layout_mode = 0
-offset_top = 486.0
-offset_right = 908.0
-offset_bottom = 647.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.032
+anchor_top = 0.719
+anchor_right = 0.5
+anchor_bottom = 0.868
+offset_left = 0.559998
+offset_top = -0.52002
+offset_right = 10.0
+offset_bottom = -0.440063
 
 [node name="Leave" type="Button" parent="."]
 layout_mode = 0
@@ -43,4 +49,5 @@ offset_bottom = 100.0
 text = "Leave
 "
 
+[connection signal="pressed" from="Invite" to="." method="_on_invite_pressed"]
 [connection signal="pressed" from="Leave" to="." method="_on_leave_pressed"]

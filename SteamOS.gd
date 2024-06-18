@@ -47,10 +47,10 @@ func _on_lobby_created(connected, id):
 		print(lobby_id)
 
 func join_lobby(id):
-	peer.connect_lobby(id)
+	if lobby_id == 0:
+		lobby_id = id
+	peer.connect_lobby(lobby_id)
 	multiplayer.multiplayer_peer = peer
-	lobby_id = id
-	Menu.load_menu(Menu.MENU_LEVEL.LOBBY)
 
 
 

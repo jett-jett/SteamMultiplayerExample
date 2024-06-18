@@ -37,4 +37,5 @@ func _deferred_load_menu(menulevel):
 	container.add_child(current_menu)
 	
 func _ready():
-	load_menu(MENU_LEVEL.MAIN)
+	#load_menu(MENU_LEVEL.MAIN)
+	pass
