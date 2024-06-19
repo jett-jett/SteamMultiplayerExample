@@ -9,8 +9,14 @@ var steam_id: int = 0
 var steam_username: String = ""
 
 #Multiplayer Variables
-var lobby_id = 0
 var peer = SteamMultiplayerPeer.new()
+
+#Lobby Infomation
+var lobby_id = 0
+var lobby_data
+var lobby_members: Array = []
+var lobby_members_max: int = 10
+var lobby_vote_kick: bool = false
 
 func _init():
 	OS.set_environment("SteamAppID", str(480))
@@ -58,3 +64,41 @@ func join_lobby(id):
 	lobby_id = id
 	peer.connect_lobby(lobby_id)
 	multiplayer.multiplayer_peer = peer
+
+func leave_lobby() -> void:
+	# If in a lobby, leave it
+	if lobby_id != 0:
+		# Send leave request to Steam
+		Steam.leaveLobby(lobby_id)
+		# Wipe the Steam lobby ID then display the default lobby ID and player list title
+		lobby_id = 0
+		# Close session with all users
+		for this_member in lobby_members:
+		# Make sure this isn't your Steam ID
+			if this_member['steam_id'] != steam_id:
+				# Close the P2P session
+				Steam.closeP2PSessionWithUser(this_member['steam_id'])
+		# Clear the local lobby list
+		lobby_members.clear()
+
+func get_lobby_members()-> void:
+	# Clear your previous lobby list
+	lobby_members.clear()
+	# Get the number of members from this lobby from Steam
+	var num_of_members: int = Steam.getNumLobbyMembers(lobby_id)
+	# Get the data of these players from Steam
+	for this_member in range(0, num_of_members):
+		# Get the member's Steam ID
+		var member_steam_id: int = Steam.getLobbyMemberByIndex(lobby_id, this_member)
+		# Get the member's Steam name
+		var member_steam_name: String = Steam.getFriendPersonaName(member_steam_id)
+		# Add them to the list
+		lobby_members.append({"steam_id":member_steam_id, "steam_name":member_steam_name})
+
+# A user's information has changed
+func _on_persona_change(this_steam_id: int, _flag: int) -> void:
+	# Make sure you're in a lobby and this user is valid or Steam might spam your console log
+	if lobby_id > 0:
+		print("A user (%s) had information change, update the lobby list" % this_steam_id)
+		# Update the player list
+		get_lobby_members()

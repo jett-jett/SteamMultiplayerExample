@@ -27,7 +27,6 @@ func _on_loaded_avatar(user_id: int, avatar_size: int, avatar_buffer: PackedByte
 	var sprite = Sprite2D.new()
 	sprite.set_texture(avatar_texture)
 	$PlayerPictureContainer.add_child(sprite)
-	
 
 func _on_leave_pressed():
 	Menu.load_menu(Menu.MENU_LEVEL.MAIN)
